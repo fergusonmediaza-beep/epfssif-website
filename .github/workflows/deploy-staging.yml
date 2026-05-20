@@ -1,0 +1,74 @@
+name: Staging Automation
+ 
+on:
+  push:
+    branches:
+      - staging
+ 
+jobs:
+  staging-website:
+    runs-on: ubuntu-latest-m
+    if: github.ref == 'refs/heads/staging'
+    environment: staging-env
+
+    outputs:
+      NEW_STAGING_TAG: ${{ steps.set_tag.outputs.NEW_STAGING_TAG }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Set Staging Image Name
+        run: echo "STAGING_IMAGE_NAME=${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPO }}" >> $GITHUB_ENV
+
+      - name: Auto-increment Staging Tag
+        id: set_tag
+        run: |
+          NEW_STAGING_TAG="staging_v${{ github.run_number }}"
+          echo "New Tag: $NEW_STAGING_TAG"
+          echo "NEW_STAGING_TAG=$NEW_STAGING_TAG" >> $GITHUB_OUTPUT
+      - name: Build & Push Docker Image
+        run: |
+          docker build -t "$STAGING_IMAGE_NAME:${{ steps.set_tag.outputs.NEW_STAGING_TAG }}" .
+          docker push "$STAGING_IMAGE_NAME:${{ steps.set_tag.outputs.NEW_STAGING_TAG }}"
+      - name: Logout from Docker Hub
+        run: docker logout
+        
+  deploy-staging-website:
+    runs-on: ubuntu-latest-m
+    needs: staging-website
+    if: github.ref == 'refs/heads/staging'
+    environment: staging-env
+    steps:
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Deploy via AWS SSM
+        run: |
+          INSTANCE_ID="${{ secrets.EC2_INSTANCE_ID }}"
+          LATEST_WEBSITE_TAG="${{ needs.staging-website.outputs.NEW_STAGING_TAG }}"
+          echo "Deploying Staging tag: $NEW_STAGING_TAG to instance $INSTANCE_ID"
+          aws ssm send-command \
+            --instance-ids "$INSTANCE_ID" \
+            --document-name "AWS-RunShellScript" \
+            --comment "Staging Website Deployment" \
+            --parameters commands="[
+              \"cd /home/ubuntu/staging_websites/epfssif\",
+              \"sed -i 's/^STAGING_TAG=.*/STAGING_TAG=$LATEST_WEBSITE_TAG/' .env\",
+              \"docker compose pull staging\",
+              \"docker compose up -d staging\"
+            ]" \
+            --output text

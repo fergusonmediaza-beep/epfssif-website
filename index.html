@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EPF SSIF — Sustainable Social Impact Fund</title>
+  <meta name="description" content="EPF Sustainable Social Impact Fund — a dual-channel impact investing platform delivering measurable social returns in South Africa's township economy.">
+  <meta name="keywords" content="EPF SSIF, social impact fund, CSI, impact investing, township economy, South Africa, B-BBEE, sustainable investment">
+  <link rel="icon" type="image/png" href="assets/images/EPF-logo-white.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/new-styles.css">
+</head>
+<nav class="navbar navbar-expand-lg navbar-dark navbar-background sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-inline-flex align-items-center fw-bold fs-3" href="index.html">
+        <img src="assets/images/EPF-logo-white.png" alt="UniVeritas Logo" width="40" height="40" class="me-2">
+        <div class="d-flex flex-column lh-1">
+          <span>EPF <span class="logo-span">SSIF</span></span>
+          <small class="fw-normal logo-slogan text-white">Buy Outcomes, Not Promises</small>
+        </div>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item small"><a class="nav-link px-3 text-white active" href="index.html" aria-current="page">Home</a></li>
+          <li class="nav-item small"><a class="nav-link px-3 text-white" href="about.html">About</a></li>
+          <li class="nav-item small dropdown">
+            <a class="nav-link px-3 text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Funds <i class="fa-solid fa-chevron-down nav-dropdown-chevron"></i></a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item small" href="fund-1.html">SSIF 1 — CSI &amp; Social Impact Fund</a></li>
+              <li><a class="dropdown-item small" href="fund-2.html">SSIF 2 — Institutional &amp; Equity Fund</a></li>
+            </ul>
+          </li>
+        </ul>
+        <a href="contact-us.html" class="btn btn-light rounded-4 px-4 py-2 btn-one border-0 d-lg-none mt-3">Contact
+          Us</a>
+      </div>
+
+      <a href="contact-us.html" class="btn btn-light rounded-4 px-4 py-2 btn-one border-0 d-none d-lg-block">Contact
+        Us</a>
+    </div>
+  </nav>
+<body>
+
+  <div class="page-loader-overlay" id="page_loader_overlay">
+    <span class="page-loader"></span>
+  </div>
+
+  <section class="hero-section position-relative text-white">
+    <video autoplay muted loop playsinline class="hero-video-bg">
+      <source src="/assets/videos/bg.webm" type="video/webm">
+    </video>
+    <div class="hero-overlay"></div>
+
+    <div class="container">
+      <div class="row align-items-center min-vh-50 py-5 d-flex flex-column flex-lg-row">
+        <div class="col-lg-6 order-2 order-lg-1">
+          <h1 class="display-5 fw-semibold hero-title hero-animate-1">Reinvesting Social Capital For Sustainable Social Impact
+            Opportunities</h1>
+          <p class="mb-4 small hero-desc hero-animate-2">Stop funding temporary relief. We deploy ready to trade micro franchises that
+            keep money circulating locally and generate verifiable, audit-ready social impact.</p>
+          <div class="d-flex gap-3 mobile-btn d-none">
+            <a href="#about"
+              class="btn btn-light rounded-4 px-4 py-2 text-white bg-transparent btn-two text-decoration-none">Get
+              Started</a>
+            <a href="#about" class="btn btn-light rounded-4 px-4 py-2 btn-one border-0">Learn more</a>
+          </div>
+        </div>
+
+        <div class="col-lg-6 d-flex justify-content-center position-relative mt-5 mt-lg-0 order-1 order-lg-2 hero-animate-3">
+          <div class="position-relative">
+            <div
+              class="video-tv position-relative overflow-hidden d-flex align-items-center justify-content-center shadow-lg border border-dark border-4 rounded-3">
+              <div id="playOverlay" class="text-center text-white z-2 position-relative">
+                <div
+                  class="icon rounded-circle d-inline-flex align-items-center justify-content-center shadow icon-circle">
+                  <i class="fa-solid fa-play text-black fs-2"></i>
+                </div>
+              </div>
+
+              <video id="promoVideo" muted loop playsinline
+                class="position-absolute w-100 h-100 object-fit-contain opacity-50">
+                <source src="https://empirewebvideos.s3.us-east-1.amazonaws.com/websites/empire/videos/ssif-hero.mp4"
+                  type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+            <div class="d-flex flex-column align-items-center">
+              <div class="tv-stand"></div>
+              <div class="tv-base"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid px-0 px-md-3 mt-auto hero-animate-4">
+        <div class="row hero-footer text-white rounded-top-5 p-4 mx-0 g-4">
+
+          <div class="col-md-4 d-flex align-items-start gap-3">
+            <div class="icon rounded-circle d-flex align-items-center justify-content-center hero-icon flex-shrink-0">
+              <i class="fa-solid fa-piggy-bank text-black fs-5"></i>
+            </div>
+            <div>
+              <h6 class="fw-semibold mb-1 hero-title-two">Youth Unemployment</h6>
+              <p class="small opacity-75 mb-0 hero-desc-two">Tackling the crisis directly by deploying
+                "Business-in-a-Box" assets that turn grant-dependent youth into Day-1 revenue-ready entrepreneurs.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 d-flex align-items-start gap-3 border-start-md border-secondary">
+            <div class="icon rounded-circle d-flex align-items-center justify-content-center hero-icon flex-shrink-0">
+              <i class="fa-solid fa-lightbulb fs-5 text-black"></i>
+            </div>
+            <div>
+              <h6 class="fw-semibold mb-1 hero-title-two">Per Verified Job Created</h6>
+              <p class="small opacity-75 mb-0 hero-desc-two">Every outcome is tracked in real-time through the VSI
+                Platform, giving you audit-ready data and transparent proof of your exact social impact.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 d-flex align-items-start gap-3 border-start-md border-secondary">
+            <div class="icon rounded-circle d-flex align-items-center justify-content-center hero-icon flex-shrink-0">
+              <i class="fa-solid fa-globe fs-5 text-black"></i>
+            </div>
+            <div>
+              <h6 class="fw-semibold mb-1 hero-title-two">Section 18A Deductible</h6>
+              <p class="small opacity-75 mb-0 hero-desc-two">Your capital is not a sunk cost. Receive immediate tax
+                compliance benefits while investing in a closed-loop engine that continually funds local enterprises.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="position-relative overflow-hidden py-5 problem-section-bg text-white" id="about">
+    <div class="container py-5">
+      <div class="row g-5 align-items-center">
+        <div class="col-12 col-lg-6 pe-lg-5 reveal-left">
+          <div class="d-flex align-items-center mb-4">
+            <span class="eyebrow-line"></span>
+            <span class="text-uppercase fw-bold eyebrow-text small">About us</span>
+          </div>
+
+          <h3 class="fw-bold mb-4">
+            EPF SUSTAINABLE SOCIAL IMPACT FUND
+          </h3>
+
+          <p class="small section-desc mb-4 hero-desc-two">
+            A first of its kind closed loop investment system that transforms social spending into self-sustaining
+            enterprise development. We are not asking for a donation we are presenting a permanent financial vehicle for
+            township economic transformation.
+          </p>
+          <div class="row g-2 text-center">
+
+            <div class="col-4">
+              <div class="card h-100 about-card">
+                <div class="card-body p-2 py-md-4">
+                  <h5 class="card-title text-black fw-bold mb-1 mb-md-2 stats-title">R1000</h5>
+                  <p class="card-text text-black fw-normal mb-0 stats-dec">=1 verified full-time job created</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-4">
+              <div class="card h-100 about-card">
+                <div class="card-body p-2 py-md-4">
+                  <h5 class="card-title text-black fw-bold mb-1 mb-md-2 stats-title">Section 18A</h5>
+                  <p class="card-text text-black fw-normal mb-0 stats-dec">Tax deductibility via registered PBO</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-4">
+              <div class="card h-100 about-card">
+                <div class="card-body p-2 py-md-4">
+                  <h5 class="card-title text-black fw-bold mb-1 mb-md-2 stats-title">100%</h5>
+                  <p class="card-text text-black fw-normal mb-0 stats-dec">Audited, GPS tracked impact accountability</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-12 col-lg-6 reveal-right">
+          <div class="position-relative">
+            <div class="rounded-5 overflow-hidden shadow-lg border border-secondary border-opacity-25">
+              <img src="assets/images/impact.webp" alt="Social Impact and Enterprise Development"
+                class="img-fluid w-100 object-fit-cover about-img">
+            </div>
+
+            <div
+              class="position-absolute bottom-0 start-0 m-4 p-3 bg-dark bg-opacity-75 backdrop-blur rounded-4 border border-white border-opacity-10 d-none d-md-block image-name">
+              <p class="small mb-0 text-white-50">EPF SSIF Core Framework</p>
+              <div class="fw-bold logo-span">Verifiable Job Creation</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="timeline-section-bg overflow-hidden py-5" id="ecosystem">
+    <div class="container py-5">
+
+      <div class="row justify-content-center text-center mb-2">
+        <div class="col-12 col-lg-10">
+
+          <div class="legacy-eyebrow-wrap d-flex align-items-center justify-content-center reveal">
+            <span class="legacy-eyebrow-line"></span>
+            <span class="legacy-eyebrow-text fw-bold text-uppercase logo-span">POWER OF PARENTAGE</span>
+            <span class="legacy-eyebrow-line"></span>
+          </div>
+
+          <h2 class="timeline-heading fw-semibold fs-1 reveal reveal-delay-1 epf-heading-accent">The Ecosystem</h2>
+
+          <p class="fw-normal reveal reveal-delay-2">The EPF SSIF is anchored by an established tech ecosystem with a 10 year legacy,
+            proprietary software, and institutional-grade infrastructure required for investor trust.</p>
+        </div>
+      </div>
+
+      <div class="row g-2 justify-content-center">
+        <div class="col-12 col-md-6 col-xl-3 reveal reveal-delay-1">
+          <a href="https://empirepartnerfoundation.org/" target="_blank" rel="noopener noreferrer" class="legacy-card text-start h-100 d-flex">
+            <div class="legacy-icon-box bg-transparent d-flex align-items-center justify-content-center icon">
+              <img src="assets/images/EPF-logo-white.png" alt="Company Logo" width="30" height="30" class="img-fluid">
+            </div>
+            <div class="legacy-card-title fw-bold logo-span text-white">Empire Partner Foundation</div>
+            <div class="legacy-card-desc text-white">Established in 2016 with the goal of driving economic empowerment
+              and social development through strategic investments in sectors that produce sustainable growth. As a
+              South African Section 18A non-profit organization, EPF is dedicated to addressing 10 critical public
+              sector challenges</div>
+          </a>
+        </div>
+
+        <div class="col-12 col-md-6 col-xl-3 reveal reveal-delay-2">
+          <a href="https://www.effectuscapital.co.za" target="_blank" rel="noopener noreferrer" class="legacy-card text-start h-100 d-flex">
+            <div class="legacy-icon-box bg-transparent d-flex align-items-center justify-content-center icon">
+              <img src="assets/images/ecm_logo.png" alt="Company Logo" width="30" height="30" class="img-fluid">
+            </div>
+            <div class="legacy-card-title fw-bold logo-span text-white">Effectus Capital Management</div>
+            <div class="legacy-card-desc text-white">Boutique South African financial services provider and asset
+              manager. Based in Sandton, Johannesburg, the firm was established in 2015 and focuses on both traditional
+              and alternative investment solutions.</div>
+          </a>
+        </div>
+
+        <div class="col-12 col-md-6 col-xl-3 reveal reveal-delay-3">
+          <a href="https://epftechfund.org/" target="_blank" rel="noopener noreferrer" class="legacy-card text-start h-100 d-flex">
+            <div class="legacy-icon-box bg-transparent d-flex align-items-center justify-content-center icon">
+              <img src="assets/images/EPF-logo-white.png" alt="Company Logo" width="30" height="30" class="img-fluid">
+            </div>
+            <div class="legacy-card-title fw-bold logo-span text-white">EPF Tech Fund</div>
+            <div class="legacy-card-desc text-white">Launched in 2021 to specifically focus on impact investing in the
+              technology sector. The fund operates under a hybrid model, blending commercial return with social value.
+              It aims to support businesses that use technology to solve pressing societal challenges</div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="timeline-section-bg text-dark py-5">
+    <div class="container">
+      <div class="row align-items-center g-5">
+
+        <div class="col-lg-7 reveal-left">
+
+          <div class="mb-4">
+            <div class="d-flex align-items-center mb-2">
+              <span class="text-warning fs-3 fw-bold me-2">&mdash;</span>
+              <span class="fw-bold text-uppercase tracking-wide">The Leaky Bucket</span>
+            </div>
+            <h3 class="fw-bold text-dark mb-4 epf-heading-accent-left">The Problem</h3>
+            <p class="text-black fw-normal">
+              South Africa does not suffer from a lack of capital. It suffers from inefficient deployment of capital
+              where funding is consumed once off without generating durable employment or scalable enterprises.
+            </p>
+          </div>
+
+          <div class="row g-2">
+
+            <div class="col-md-6">
+              <div class="card h-100 border-0 border-secondary rounded-4 shadow-sm">
+                <div class="card-body d-flex flex-column justify-content-center text-center p-4">
+                  <h3 class="card-title fw-bold mb-1">33.2%</h3>
+                  <p class="card-text mb-0">National Unemployment<br>Q2 2025</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="card h-100 border-0 border-secondary rounded-4 shadow-sm">
+                <div class="card-body d-flex flex-column justify-content-center text-center p-4">
+                  <h3 class="card-title fw-bold mb-1">62%+</h3>
+                  <p class="card-text mb-0">Youth Unemployment (15-24)<br>Entry-level crisis</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="card h-100 border-0 border-secondary rounded-4 shadow-sm">
+                <div class="card-body d-flex flex-column justify-content-center text-center p-4">
+                  <h3 class="card-title fw-bold mb-1">46.1%</h3>
+                  <p class="card-text mb-0">Youth Unemployment (15-34)<br>60% with zero work experience</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="card h-100 border-0 border-secondary rounded-4 shadow-sm">
+                <div class="card-body d-flex flex-column justify-content-center text-center p-4">
+                  <h3 class="card-title fw-bold mb-1">28M+</h3>
+                  <p class="card-text mb-0">Social Grant Recipients<br>Outpacing the tax base</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-lg-5 text-center reveal-right">
+          <div class="bg-light rounded-4 p-3 shadow-sm border">
+            <img src="assets/images/problem.JPG" alt="Leaky Bucket Overflowing" class="img-fluid rounded-4 mb-4">
+
+            <p class="fw-bold text-dark px-3 mb-2 pb-2">
+              R289.9 billion spent, yet unemployment rises.<br>
+              The system consumes capital without recycling it.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5 donation-gap-bg" id="donation-gap">
+    <div class="container py-5">
+
+      <div class="row justify-content-center mb-5">
+        <div class="col-12 col-lg-8 text-center reveal">
+          <p class="text-warning text-uppercase fw-bold small mb-2 letter-spacing-2">The Donation Gap</p>
+          <h2 class="fw-semibold mb-3 epf-heading-accent">Why Your Donation Deserves Better</h2>
+          <p class="text-muted">Traditional philanthropy is built on goodwill, but goodwill alone cannot solve a structural unemployment crisis. The challenge is not generosity — it is the mechanism through which generosity flows.</p>
+        </div>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-12 col-md-6 reveal reveal-delay-1">
+          <div class="donation-gap-card h-100">
+            <div class="d-flex align-items-center mb-3">
+              <div class="donation-gap-icon me-3">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <h5 class="fw-bold mb-0">No Proof of Impact</h5>
+            </div>
+            <p class="mb-0 text-muted small">Most donors receive a receipt but no evidence of what their money actually created. How many jobs? How long did they last? Where is the proof?</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 reveal reveal-delay-2">
+          <div class="donation-gap-card h-100">
+            <div class="d-flex align-items-center mb-3">
+              <div class="donation-gap-icon me-3">
+                <i class="fa-solid fa-file-contract"></i>
+              </div>
+              <h5 class="fw-bold mb-0">No Accountability</h5>
+            </div>
+            <p class="mb-0 text-muted small">Manual reporting, cash handling, and unverified milestones leave donors relying on trust. The EPF SSIF replaces trust with technology.</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 reveal reveal-delay-3">
+          <div class="donation-gap-card h-100">
+            <div class="d-flex align-items-center mb-3">
+              <div class="donation-gap-icon me-3">
+                <i class="fa-solid fa-arrow-rotate-left"></i>
+              </div>
+              <h5 class="fw-bold mb-0">Once-off Value</h5>
+            </div>
+            <p class="mb-0 text-muted small">A traditional donation creates a moment — not a movement. Once spent, the impact stops. The circular engine turns your gift into a perpetual cycle.</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 reveal reveal-delay-4">
+          <div class="donation-gap-card h-100">
+            <div class="d-flex align-items-center mb-3">
+              <div class="donation-gap-icon me-3">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+              <h5 class="fw-bold mb-0">No Legacy</h5>
+            </div>
+            <p class="mb-0 text-muted small">Your contribution should build something durable. A township enterprise that creates 10 jobs today will create 20 tomorrow if the capital keeps being reinvested.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row justify-content-center mt-5">
+        <div class="col-12 col-lg-10">
+          <div class="donation-gap-solution p-4 rounded-4 text-center">
+            <p class="mb-0 fw-semibold">EPF SSIF solves all four: with GPS-tracked, timestamped, independently audited impact data structured for B-BBEE verification and Integrated Reporting from Day 1.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="py-5 timeline-section-bg text-dark" id="our-funds">
+    <div class="container py-4">
+
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-12 col-lg-8 reveal">
+          <div class="legacy-eyebrow-wrap d-flex align-items-center justify-content-center mb-3">
+            <span class="legacy-eyebrow-line"></span>
+            <span class="legacy-eyebrow-text fw-bold text-uppercase logo-span mx-3">Two Channels. One Mission.</span>
+            <span class="legacy-eyebrow-line"></span>
+          </div>
+          <h2 class="fw-semibold mb-3 epf-heading-accent">Explore Our Funds</h2>
+          <p class="text-muted">Philanthropic and commercial capital kept structurally separate — clarity of purpose, regulatory integrity, long-term scalability.</p>
+        </div>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-12 col-md-6 col-lg-5 reveal reveal-delay-1">
+          <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+            <div class="card-header bg-dark text-white p-4">
+              <span class="badge bg-success mb-2">Active Now</span>
+              <h3 class="fw-semibold mb-1">SSIF 1 — CSI &amp; Social Impact Fund</h3>
+              <p class="small mb-0 opacity-75">Donor Channel — Philanthropic &amp; CSI Capital</p>
+            </div>
+            <div class="card-body p-4">
+              <p class="text-muted small mb-4">Section 18A eligible. Administered by the EPF Foundation (PBO). Designed for Corporate CSI, B-BBEE optimisers, private donors, and philanthropic institutions seeking verified impact outcomes.</p>
+              <a href="fund-1.html" class="btn btn-dark rounded-4 px-4 py-2 btn-one border-0 w-100">Explore Fund 1 &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-5 reveal reveal-delay-2">
+          <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+            <div class="card-header bg-dark text-white p-4">
+              <span class="badge bg-warning text-dark mb-2">Q1 2027</span>
+              <h3 class="fw-semibold mb-1">SSIF 2 — Institutional &amp; Equity Fund</h3>
+              <p class="small mb-0 opacity-75">Investment Channel — Commercial &amp; Impact Capital</p>
+            </div>
+            <div class="card-body p-4">
+              <p class="text-muted small mb-4">FSCA-regulated via Effectus Capital Management. Designed for pension funds, DFIs, impact investors, and institutional asset managers seeking ESG-aligned financial returns.</p>
+              <a href="fund-2.html" class="btn btn-dark rounded-4 px-4 py-2 btn-one border-0 w-100">Explore Fund 2 &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center py-4 invitation-footer">
+    <div class="container">
+      <span>&copy; 2026 EPF Sustainable Social Impact Fund. All Rights Reserved.</span>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="assets/js/new.js"></script>
+
+</body>
+</html>
