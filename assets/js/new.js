@@ -94,6 +94,18 @@ function initHeroEntrance() {
   setTimeout(function() { applyHeroEntered(els); }, 5000);
 }
 
+/* ── Back to top ─────────────────────────────────────────────────── */
+function initBackToTop() {
+  var btn = document.getElementById('back_to_top');
+  if (!btn) return;
+  window.addEventListener('scroll', function() {
+    btn.classList.toggle('visible', window.scrollY > 400);
+  }, { passive: true });
+  btn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
 /* ── Promo video player ──────────────────────────────────────────── */
 function initVideoPlayer() {
   var videoContainer = document.querySelector('.video-tv');
@@ -117,6 +129,7 @@ initAssetProtectionAnimation();
 initVideoPlayer();
 initPageLoader();
 initHeroEntrance();
+initBackToTop();
 
 /* ── jQuery: contact form + mobile nav (single ready block) ─────── */
 $(function() {
