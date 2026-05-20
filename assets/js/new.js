@@ -169,7 +169,7 @@ $(function() {
     });
   }
 
-  $('#mainNavbar .nav-link').on('click', function() {
+  $('#mainNavbar .nav-link:not(.dropdown-toggle), #mainNavbar .dropdown-item').on('click', function() {
     var $mobileMenu = $('#mainNavbar');
     if ($mobileMenu.hasClass('show')) {
       $mobileMenu.collapse('hide');
