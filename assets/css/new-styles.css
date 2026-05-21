@@ -1494,6 +1494,8 @@ video:fullscreen {
   border-radius: 1rem;
   padding: 1.75rem;
   box-shadow: 0 1px 4px #0000000a;
+  display: flex;
+  flex-direction: column;
 }
 
 .impact-basket-icon {
