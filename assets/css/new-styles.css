@@ -856,10 +856,43 @@ a.legacy-card:hover::after {
 }
 
 .invitation-footer {
-  background-color: #000;
+  background-color: #0d1321;
   color: #fff;
   font-size: 0.85rem;
-  font-weight: 600;
+}
+
+.footer-link {
+  color: #ffffffb3;
+  text-decoration: none;
+  transition: color 0.25s var(--ease-premium);
+}
+
+.footer-link:hover {
+  color: #C9A84C;
+}
+
+.footer-social-btn {
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #ffffff33;
+  border-radius: 2rem;
+  padding: 0.5rem 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  transition: border-color 0.25s var(--ease-premium), color 0.25s var(--ease-premium);
+}
+
+.footer-social-btn:hover {
+  color: #C9A84C;
+  border-color: #C9A84C;
+}
+
+.footer-bottom {
+  border-top: 1px solid #1e2d47;
+  padding: 1rem 0;
+  text-align: center;
 }
 
 .hero-section {
