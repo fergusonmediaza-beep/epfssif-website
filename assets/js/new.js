@@ -134,10 +134,10 @@ initBackToTop();
 /* ── jQuery: contact form + mobile nav (single ready block) ─────── */
 $(function() {
 
-  if ($("#contact-form").length) {
+  if ($("#contact_form").length) {
     emailjs.init("9FEuiw6awosAhcPRI");
 
-    $("#contact-form").on("submit", function(event) {
+    $("#contact_form").on("submit", function(event) {
       event.preventDefault();
       var $btn     = $("#submitBtn");
       var $spinner = $("#submitSpinner");
@@ -164,7 +164,7 @@ $(function() {
             text: 'Thank you for reaching out. We will get back to you soon.',
             confirmButtonColor: '#212529'
           });
-          $("#contact-form")[0].reset();
+          $("#contact_form")[0].reset();
         }, function(error) {
           console.log('FAILED...', error);
           Swal.fire({

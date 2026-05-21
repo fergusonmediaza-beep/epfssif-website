@@ -801,7 +801,7 @@ a.legacy-card:hover::after {
   border: 1px solid #1f2937;
   border-radius: 0.5rem;
   padding: 1.5rem;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
   cursor: pointer;
   flex-direction: column;
 }
@@ -1674,24 +1674,6 @@ video:fullscreen {
   filter: invert(1);
 }
 
-/* ===================== ASSET PROTECTION BAR ANIMATION ===================== */
-
-.asset-progress-bar {
-  width: 0;
-  transition: width 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.asset-progress-bar.asset-bar-five.in-view {
-  width: 25%;
-}
-
-.asset-progress-bar.asset-bar-ten.in-view {
-  width: 50%;
-}
-
-.asset-progress-bar.asset-bar-fifteen.in-view {
-  width: 75%;
-}
 
 /* ===================== DUAL-CHANNEL BANNERS ===================== */
 
