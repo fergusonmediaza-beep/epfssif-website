@@ -2012,6 +2012,12 @@ video:fullscreen {
   transition: transform 0.35s var(--ease-premium), box-shadow 0.35s;
 }
 
+.impact-basket-card .badge {
+  white-space: normal;
+  text-align: center;
+  line-height: 1.4;
+}
+
 .impact-basket-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 36px #00000016;
