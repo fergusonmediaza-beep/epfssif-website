@@ -1683,53 +1683,143 @@ video:fullscreen {
 }
 
 
-/* ===================== CAPITAL FLOW DIAGRAM ===================== */
+/* ===================== CAPITAL FLOW DIAGRAM — ZIGZAG TIMELINE ===================== */
 
-.capital-flow-wrapper {
-  gap: 0;
+.capital-flow-section {
+  background-color: #0d1321;
+  color: #fff;
 }
 
-.capital-flow-step {
+/* Desktop zigzag wrapper */
+.czigzag-wrapper {
+  position: relative;
+  height: 300px;
+}
+
+.czigzag-svg-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.czigzag-track {
+  display: flex;
+  align-items: stretch;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.czigzag-col {
   flex: 1;
-  background-color: #fff;
-  border: 1px solid #e5e7eb;
-  border-radius: 1rem;
-  padding: 1.5rem 1rem;
-  box-shadow: 0 1px 4px #0000000a;
-  min-width: 140px;
+  position: relative;
 }
 
-.capital-flow-icon {
-  width: 48px;
-  height: 48px;
+/* Node circles */
+.czigzag-node {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
-  background-color: #fff8e6;
-  color: #C9A84C;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
+  z-index: 2;
 }
 
-.capital-flow-arrow {
-  flex-shrink: 0;
+.czigzag-node-gold {
+  background-color: #C9A84C;
+  color: #0d1321;
+  box-shadow: 0 0 0 8px #C9A84C1a, 0 8px 28px #C9A84C33;
+}
+
+.czigzag-node-dark {
+  background-color: #141f35;
+  border: 2px solid #C9A84C;
   color: #C9A84C;
-  font-size: 1.1rem;
-  padding: 0 0.5rem;
+  box-shadow: 0 0 0 8px #0d132144, 0 8px 28px #00000033;
 }
 
-.capital-flow-desc {
-  font-size: 0.75rem;
+/* HIGH columns: node at top, label below */
+.czigzag-high .czigzag-node {
+  top: 44px;
 }
 
-@media (width < 768px) {
-  .capital-flow-wrapper {
-    gap: 0.25rem;
-  }
+.czigzag-high .czigzag-node-label {
+  position: absolute;
+  top: 132px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px;
+  text-align: center;
+}
 
-  .capital-flow-arrow {
-    padding: 0.25rem 0;
-  }
+/* LOW columns: label at top, node at bottom */
+.czigzag-low .czigzag-node {
+  bottom: 44px;
+}
+
+.czigzag-low .czigzag-node-label {
+  position: absolute;
+  bottom: 132px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px;
+  text-align: center;
+}
+
+/* Label content */
+.czigzag-pill {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 0.2rem 0.7rem;
+  border-radius: 2rem;
+  border: 1px solid #C9A84C55;
+  color: #C9A84C;
+  margin-bottom: 0.35rem;
+}
+
+.czigzag-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.2rem;
+  margin-top: 0;
+}
+
+.czigzag-desc {
+  font-size: 0.72rem;
+  color: #ffffff88;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Mobile card grid */
+.czigzag-mobile-card {
+  background-color: #141f35;
+  border: 1px solid #1e2d47;
+  border-radius: 0.75rem;
+  padding: 1.25rem 1rem;
+}
+
+.czigzag-mobile-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
 }
 
 
