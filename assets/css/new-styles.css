@@ -409,6 +409,29 @@ a.legacy-card:hover::after {
   flex-grow: 1;
 }
 
+.legacy-card-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #C9A84C;
+  border: 1px solid #C9A84C55;
+  border-radius: 2rem;
+  padding: 0.35rem 0.9rem;
+  margin-top: 0.25rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+a.legacy-card:hover .legacy-card-btn {
+  background-color: #C9A84C1a;
+  border-color: #C9A84C;
+  color: #e0bc6e;
+}
+
 .legacy-list {
   list-style: none;
   padding: 0;
