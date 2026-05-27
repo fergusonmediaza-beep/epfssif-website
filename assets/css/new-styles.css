@@ -1247,7 +1247,6 @@ video:fullscreen {
 .donation-gap-card {
   background-color: #ffffff;
   border: 1px solid #e5e7eb;
-  border-left: 4px solid #F59E0B;
   border-radius: 1rem;
   padding: 1.75rem;
   color: #0d1321;
@@ -2169,16 +2168,17 @@ video:fullscreen {
 
 .fund-gap-card:hover {
   transform: translateY(-4px);
-  border-color: #4ade8044;
+  border-color: #C9A84C44;
 }
 
 .donation-gap-card {
-  transition: transform 0.35s var(--ease-premium), border-color 0.35s;
+  transition: transform 0.35s var(--ease-premium), border-color 0.35s, box-shadow 0.35s;
 }
 
 .donation-gap-card:hover {
   transform: translateY(-4px);
-  border-color: #4ade8055;
+  border-color: #C9A84C55;
+  box-shadow: 0 8px 32px #0d132114;
 }
 
 .vsi-feature-card {
@@ -2187,7 +2187,7 @@ video:fullscreen {
 
 .vsi-feature-card:hover {
   transform: translateY(-4px);
-  border-color: #4ade8055;
+  border-color: #C9A84C44;
 }
 
 .fund-stat-card {
