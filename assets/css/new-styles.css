@@ -2434,11 +2434,6 @@ video:fullscreen {
   width: 100%;
 }
 
-/* --- HR refinement --- */
-hr {
-  border-color: #1e2d47;
-  opacity: 1;
-}
 
 /* --- Letter spacing refinement --- */
 .letter-spacing-2 {
